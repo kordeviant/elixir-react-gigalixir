@@ -13,9 +13,14 @@ defmodule HelloWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", HelloWeb do
+  scope "/", HelloWeb, host: "tory.ir" do
     pipe_through :browser
     get "/", PageController, :index
+  end
+
+  scope "/", HelloWeb, host: "resume.tory.ir" do
+    pipe_through :browser
+    get "/", PageController, :resume
   end
 
   # Other scopes may use custom stacks.

@@ -2,14 +2,18 @@ defmodule Hello.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
-
   use Application
+  use Supervisor
 
   def start(_type, _args) do
+    render_service_path = "#{File.cwd!()}/assets/js/server.js"
+    pool_size = 4
+
     # List all child processes to be supervised
     children = [
       # Start the Ecto repository
       Hello.Repo,
+      supervisor(ReactRender, [[render_service_path: render_service_path, pool_size: pool_size]]),
       # Start the endpoint when the application starts
       HelloWeb.Endpoint
       # Starts a worker by calling: Hello.Worker.start_link(arg)

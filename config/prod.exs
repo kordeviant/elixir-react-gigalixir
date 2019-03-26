@@ -10,6 +10,10 @@ use Mix.Config
 # which you should run after static files are built and
 # before starting your production server.
 config :hello, HelloWeb.Endpoint,
+  domains: [
+    top: "tory.ir",
+    resume: "resume.tory.ir"
+  ],
   load_from_system_env: true,
   # Needed for Phoenix 1.2 and 1.4. Doesn't hurt for 1.3.
   http: [:inet6, port: {:system, "PORT"}],

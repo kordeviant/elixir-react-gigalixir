@@ -12,7 +12,7 @@ config :hello,
 
 # Configures the endpoint
 config :hello, HelloWeb.Endpoint,
-  url: [host: "tory.ddd"],
+  url: [host: "tory.ir"],
   secret_key_base: "XiE/8c6k1LCPTjGb12dRgVYGZunYAF6w2jpX2mf6r0V3cfE4cQs/1SAAImH8RRLx",
   render_errors: [view: HelloWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Hello.PubSub, adapter: Phoenix.PubSub.PG2]

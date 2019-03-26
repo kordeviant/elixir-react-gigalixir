@@ -47,6 +47,10 @@ config :hello, HelloWeb.Endpoint,
 
 # Watch static and templates for browser reloading.
 config :hello, HelloWeb.Endpoint,
+  domains: [
+    top: "tory.ddd",
+    resume: "resume.tory.ddd"
+  ],
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},

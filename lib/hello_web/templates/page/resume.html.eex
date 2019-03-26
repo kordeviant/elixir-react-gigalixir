@@ -1,0 +1,8 @@
+<%= raw @helloWorldComponent %>
+
+<section class="sheet padding-10mm">
+
+    <!-- Write HTML just like a web page -->
+    <article>This is an A4 document.</article>
+
+  </section>

@@ -13,12 +13,15 @@ defmodule HelloWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", HelloWeb, host: "tory.ir" do
+
+  IO.inspect(Application.get_env(:hello, HelloWeb.Endpoint)[:domains])
+
+  scope "/", HelloWeb, host: Application.get_env(:hello, HelloWeb.Endpoint)[:domains][:top] do
     pipe_through :browser
     get "/", PageController, :index
   end
 
-  scope "/", HelloWeb, host: "resume.tory.ir" do
+  scope "/", HelloWeb, host: Application.get_env(:hello, HelloWeb.Endpoint)[:domains][:resume] do
     pipe_through :browser
     get "/", PageController, :resume
   end

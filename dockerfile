@@ -3,7 +3,7 @@ RUN apk add --no-cache bash
 
 # Set exposed ports
 EXPOSE 5000
-ENV PORT=5000 MIX_ENV=prod DATABASE_URL=s3.liara.ir:30733 DATABASE_USER=root DATABASE_PASSWORD=9jhD4uRJHqW8rmP8hYzAukhq
+ENV PORT=5000 MIX_ENV=prod DATABASE_URL=postgresql://s3.liara.ir:30733 DATABASE_USER=root DATABASE_PASSWORD=9jhD4uRJHqW8rmP8hYzAukhq
 
 # Cache elixir deps
 ADD mix.exs mix.lock ./

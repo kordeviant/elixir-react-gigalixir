@@ -26,6 +26,8 @@ config :hello, HelloWeb.Endpoint,
 config :hello, Hello.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: "${DATABASE_URL}",
+  username: "${DATABASE_USER}",
+  password: "${DATABASE_PASSWORD}",
   database: "",
   ssl: true,
   # Free tier db only allows 4 connections. Rolling deploys need pool_size*(n+1) connections.

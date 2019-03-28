@@ -16,7 +16,7 @@ config :hello, HelloWeb.Endpoint,
   ],
   load_from_system_env: true,
   # Needed for Phoenix 1.2 and 1.4. Doesn't hurt for 1.3.
-  http: [:inet6, port: {:system, "PORT"}],
+  http: [:inet6, port: "${PORT}"],
   # Without this line, your app will not start the web server!
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}",

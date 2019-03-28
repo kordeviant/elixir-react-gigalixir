@@ -1,4 +1,5 @@
 FROM bitwalker/alpine-elixir-phoenix:latest
+RUN apk add --no-cache bash
 
 # Set exposed ports
 EXPOSE 5000

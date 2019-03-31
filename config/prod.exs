@@ -19,8 +19,8 @@ config :hello, HelloWeb.Endpoint,
   http: [:inet6, port: {:system, "PORT"}],
   # Without this line, your app will not start the web server!
   server: true,
-  secret_key_base: "${SECRET_KEY_BASE}",
-  url: [host: "${APP_NAME}.gigalixirapp.com", port: 443],
+  secret_key_base: Map.fetch!(System.get_env(), "SECRET_KEY_BASE"),
+  url: [host: System.get_env("APP_NAME") <> ".gigalixirapp.com", port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 config :hello, Hello.Repo,

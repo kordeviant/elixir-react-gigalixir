@@ -1,7 +1,6 @@
-import React, { useCallback, useState, useEffect, useLayoutEffect, useRef } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useRef } from "react";
 
 function PaperSheet(props) {
-    const [count, setCount] = useState(0);
     let ref = useRef(null)
     let size = useComponentSize(ref)
 
@@ -15,10 +14,10 @@ function PaperSheet(props) {
     }, []);
     console.log(props)
     return (
-        <section className="sheet padding-10mm" ref={ref}>
+        <div className="sheet padding-10mm" ref={ref}>
             {width}{height}
             {props.children}
-        </section>
+        </div>
     )
 
 };

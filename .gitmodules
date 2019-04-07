@@ -1,3 +1,4 @@
 [submodule "elixir_react_render"]
 	path = elixir_react_render
 	url = https://github.com/kordeviant/elixir-react-gigalixir.git
+	branch = master

@@ -8,9 +8,7 @@ defmodule HelloWeb.PageController do
   def resume(conn, _params) do
     component_path = "#{File.cwd!()}/assets/js/HelloWorld.js"
     props = %{name: "kord"}
-
     {:safe, helloWorld} = ReactRender.render(component_path, props)
-
     render(conn, "resume.html", helloWorldComponent: helloWorld)
   end
 end

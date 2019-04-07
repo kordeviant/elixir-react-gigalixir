@@ -1,14 +1,28 @@
 import React, { Component, createElement } from 'react'
-
+import { Helmet } from "react-helmet";
+import './HelloWorld.css';
+import PaperSheet from './containers/paper-sheet/paper-sheet';
 class HelloWorld extends Component {
   render() {
     const { name } = this.props
 
-    return <section class="sheet padding-10mm">
+    return (
+      <PaperSheet>
+        <section className="sheet padding-10mm">
+          <Helmet>
+            <title>My Resume</title>
+          </Helmet>
+          <article>This is an A4 document. {name}</article>
+          <p styleName="red">Long story short: I went to SAMPAD(NODET) school and studied architecture at Tehran university and got a masters degree in construction management, but it is never late for anything. i was top of my class in computer and mathematics, and after improving my language skills, i realized not only my path is computer and IT, but i am good at it (having learned OOP at young age). i have been pursuing front end development as a career ever since, but i always dreamed of starting my own business and studied all about back-end development, design patterns, event driven architecture, CQRS, Docker and Kubernetes. i have a setup of Rancher, Gitlab and Kafka on my home server. i am proficient with functional programming style and i am an expert in RxJS, soon i realized i can program c# too and use my Rx skills there too. i use JS and TS everyday, modify c# and JS back-ends when i need too, and i have studied Elixir for the past year.</p>
+          <p styleName="red">Long story short: I went to SAMPAD(NODET) school and studied architecture at Tehran university and got a masters degree in construction management, but it is never late for anything. i was top of my class in computer and mathematics, and after improving my language skills, i realized not only my path is computer and IT, but i am good at it (having learned OOP at young age). i have been pursuing front end development as a career ever since, but i always dreamed of starting my own business and studied all about back-end development, design patterns, event driven architecture, CQRS, Docker and Kubernetes. i have a setup of Rancher, Gitlab and Kafka on my home server. i am proficient with functional programming style and i am an expert in RxJS, soon i realized i can program c# too and use my Rx skills there too. i use JS and TS everyday, modify c# and JS back-ends when i need too, and i have studied Elixir for the past year.</p>
+          <p styleName="red">Long story short: I went to SAMPAD(NODET) school and studied architecture at Tehran university and got a masters degree in construction management, but it is never late for anything. i was top of my class in computer and mathematics, and after improving my language skills, i realized not only my path is computer and IT, but i am good at it (having learned OOP at young age). i have been pursuing front end development as a career ever since, but i always dreamed of starting my own business and studied all about back-end development, design patterns, event driven architecture, CQRS, Docker and Kubernetes. i have a setup of Rancher, Gitlab and Kafka on my home server. i am proficient with functional programming style and i am an expert in RxJS, soon i realized i can program c# too and use my Rx skills there too. i use JS and TS everyday, modify c# and JS back-ends when i need too, and i have studied Elixir for the past year.</p>
+          <p styleName="red">Long story short: I went to SAMPAD(NODET) school and studied architecture at Tehran university and got a masters degree in construction management, but it is never late for anything. i was top of my class in computer and mathematics, and after improving my language skills, i realized not only my path is computer and IT, but i am good at it (having learned OOP at young age). i have been pursuing front end development as a career ever since, but i always dreamed of starting my own business and studied all about back-end development, design patterns, event driven architecture, CQRS, Docker and Kubernetes. i have a setup of Rancher, Gitlab and Kafka on my home server. i am proficient with functional programming style and i am an expert in RxJS, soon i realized i can program c# too and use my Rx skills there too. i use JS and TS everyday, modify c# and JS back-ends when i need too, and i have studied Elixir for the past year.</p>
+          <p styleName="red">Long story short: I went to SAMPAD(NODET) school and studied architecture at Tehran university and got a masters degree in construction management, but it is never late for anything. i was top of my class in computer and mathematics, and after improving my language skills, i realized not only my path is computer and IT, but i am good at it (having learned OOP at young age). i have been pursuing front end development as a career ever since, but i always dreamed of starting my own business and studied all about back-end development, design patterns, event driven architecture, CQRS, Docker and Kubernetes. i have a setup of Rancher, Gitlab and Kafka on my home server. i am proficient with functional programming style and i am an expert in RxJS, soon i realized i can program c# too and use my Rx skills there too. i use JS and TS everyday, modify c# and JS back-ends when i need too, and i have studied Elixir for the past year.</p>
+          <p styleName="red">Long story short: I went to SAMPAD(NODET) school and studied architecture at Tehran university and got a masters degree in construction management, but it is never late for anything. i was top of my class in computer and mathematics, and after improving my language skills, i realized not only my path is computer and IT, but i am good at it (having learned OOP at young age). i have been pursuing front end development as a career ever since, but i always dreamed of starting my own business and studied all about back-end development, design patterns, event driven architecture, CQRS, Docker and Kubernetes. i have a setup of Rancher, Gitlab and Kafka on my home server. i am proficient with functional programming style and i am an expert in RxJS, soon i realized i can program c# too and use my Rx skills there too. i use JS and TS everyday, modify c# and JS back-ends when i need too, and i have studied Elixir for the past year.</p>
 
-      <article>This is an A4 document. {name}</article>
-
-    </section>
+        </section>
+      </PaperSheet>
+    )
   }
 }
 

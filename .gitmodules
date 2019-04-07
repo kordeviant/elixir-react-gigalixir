@@ -1,0 +1,3 @@
+[submodule "elixir_react_render"]
+	path = elixir_react_render
+	url = git@github.com:kordeviant/elixir_react_render.git

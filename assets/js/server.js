@@ -1,3 +1,5 @@
-const ReactRender = require('react_render/priv/server')
+const ReactRender = require('react_render/priv/server');
+import {Helmet} from "react-helmet";
 
-ReactRender.startServer()
+const helmet = Helmet.renderStatic();
+ReactRender.startServer();

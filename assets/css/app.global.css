@@ -1,0 +1,12 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.css";
+@page {
+    size: A4;
+    margin: 2cm;
+}
+
+.sheet {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

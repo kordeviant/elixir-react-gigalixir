@@ -12,17 +12,6 @@ module.exports = (env, options) => ({
       new OptimizeCSSAssetsPlugin({})
     ]
   },
-  externals: {
-    react: 'react',
-    'react-dom': 'react-dom'
-  },
-  resolve: {
-    extensions: ['.js', '.ts', '.tsx'],
-    alias: {
-      react: path.resolve(path.join('__dirname', './node_modules/react')),
-      'react-dom': path.resolve(path.join(__dirname, './node_modules/react-dom'))
-    }
-  },
   entry: {
     './js/app.js': ['./js/app.js'].concat(glob.sync('./vendor/**/*.js'))
   },

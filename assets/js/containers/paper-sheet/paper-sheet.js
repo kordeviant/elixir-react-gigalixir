@@ -1,6 +1,8 @@
 import React, { useEffect, useLayoutEffect } from "react";
 
 function PaperSheet(props) {
+        //     console.log('useLayoutEffect')
+
     // let ref = useRef(null)
     // let size = useComponentSize(ref)
 
@@ -9,9 +11,9 @@ function PaperSheet(props) {
     // useEffect(() => {
     //     console.log('useEffect')
     // }, []);
-    // useLayoutEffect(() => {
-    //     console.log('useLayoutEffect')
-    // }, []);
+    useLayoutEffect(() => {
+        console.log('useLayoutEffect')
+    }, []);
     return (
         <>
             {props.children}

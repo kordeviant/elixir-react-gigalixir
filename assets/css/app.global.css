@@ -3,7 +3,6 @@
 @import "./phoenix.css";
 @page {
     size: A4;
-    margin: 2cm;
 }
 
 .sheet {

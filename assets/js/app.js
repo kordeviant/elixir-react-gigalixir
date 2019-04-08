@@ -2,7 +2,7 @@
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
 import "../css/app.global.css"
-import { hydrateClient } from 'react_render/priv/client'
+// import { hydrateClient } from './client.js'
 import HelloWorld from './HelloWorld.js'
 
 function getComponentFromStringName(stringName) {
@@ -14,7 +14,7 @@ function getComponentFromStringName(stringName) {
     return null
 }
 
-hydrateClient(getComponentFromStringName)
+// hydrateClient(getComponentFromStringName)
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured
 // in "webpack.config.js".

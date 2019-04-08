@@ -6,17 +6,22 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env, options) => ({
-  resolve: {
-    alias: {
-      react: path.resolve('../elixir_react_render/node_modules/react'),
-      'react-dom': path.resolve('../elixir_react_render/node_modules/react-dom')
-    }
-  },
   optimization: {
     minimizer: [
       new UglifyJsPlugin({ cache: true, parallel: true, sourceMap: false }),
       new OptimizeCSSAssetsPlugin({})
     ]
+  },
+  externals: {
+    react: 'react',
+    'react-dom': 'react-dom'
+  },
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx'],
+    alias: {
+      react: path.resolve(path.join('__dirname', './node_modules/react')),
+      'react-dom': path.resolve(path.join(__dirname, './node_modules/react-dom'))
+    }
   },
   entry: {
     './js/app.js': ['./js/app.js'].concat(glob.sync('./vendor/**/*.js'))

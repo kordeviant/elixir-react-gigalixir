@@ -2,3 +2,7 @@
 	path = elixir_react_render
 	url = https://github.com/kordeviant/elixir_react_render.git
 	branch = master
+[submodule "reaxt"]
+	path = reaxt
+	url = https://github.com/kordeviant/reaxt.git
+	branch = master
